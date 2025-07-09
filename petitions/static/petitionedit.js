@@ -63,17 +63,17 @@ function unescape(string){
     /**
      * This function unescapes certain characters sent in the JSON response for each petition so they show up correctly.
      **/
-    return string.replace(/\\"/g,"'")
-        .replace(/\"/g,'')
-        .replace(/&lt;/g,"<")
-        .replace(/&gt;/g,">")
-        .replace(/&amp;/g,"&")
-        .replace(/nbps;/g," ")
-        .replace(/"/g,"")
-        .replace(/\\n/g, "\n")
-        .replace(/(\\u201c|\\u201d)/g,'\"')
-        .replace(/\\u2014/g,'&mdash;')
-        .replace(/(\\u2019|\\u2018)/g,"'");
+    return string.replace(/\\"/gi,"'")
+        .replace(/\"/gi,'')
+        .replace(/&lt;/gi,"<")
+        .replace(/&gt;/gi,">")
+        .replace(/&amp;/gi,"&")
+        .replace(/nbps;/gi," ")
+        .replace(/"/gi,"")
+        .replace(/\\n/gi, "\n")
+        .replace(/(\\u201c|\\u201d)/gi,'\"')
+        .replace(/\\u2014/gi,'&mdash;')
+        .replace(/(\\u2019|\\u2018)/gi,"'");
 }
 $(document).ready(function(){
     tinymce.init({
